@@ -54,10 +54,10 @@ particlesJS("particles-js",{
       "enable":true,
       "speed":6,//この数値を小さくするとゆっくりな動きになる
       "direction":"none",//方向指定なし
-      "random":false,//動きはランダムにしない
+      "random":true,//動きはランダムにしない
       "straight":false,//動きをとどめない
       "out_mode":"out",//画面の外に出るように描写
-      "bounce":false,//跳ね返りなし
+      "bounce":true,//跳ね返りなし
       "attract":{
         "enable":false,
         "rotateX":600,
@@ -69,7 +69,7 @@ particlesJS("particles-js",{
     "detect_on":"canvas",
     "events":{
       "onhover":{
-        "enable":false,
+        "enable":true,
         "mode":"repulse"
       },
   "onclick":{

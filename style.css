@@ -14,10 +14,21 @@ marginを0にしないとpタグを使用した際に
 
 body {
   margin: 0;
-  padding-top: 100px;
-  padding-bottom: 60px;
+  padding-top: 45px;
+  padding-bottom: 90px;
   font-family: sans-serif;
-      background: #323339; /* 背景色にグレーを指定 */
+  background: #2C2D32; /* 背景色にグレーを指定 */
+}
+
+#wrap
+{
+    background-color: #323339;
+      padding-top: 15px;
+        padding-bottom: 15px;
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .site-header {
@@ -77,15 +88,28 @@ body {
   margin: 5px;
 }
 
+.Title h1 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  /*border-bottom: 1px solid #88898F; 罫線の色*/
+  padding-bottom: 4px;
+  font-weight: bold;
+  color: #FFFFFF
+}
+
+
 .info-block h2 {
   font-size: 18px;
   margin-bottom: 5px;
-  border-bottom: 1px solid #aaa;
-  padding-bottom: 4px;
+  border-bottom: 1px solid #88898F; /*罫線の色*/
+  padding-bottom: 5px;
   font-weight: bold;
+  color: #FFFFFF
 }
 
 .info-block p {
-  margin-top: 4px;
-  font-size: 16px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-bottom: 10px;
+  color: #D2D2D4
 }
