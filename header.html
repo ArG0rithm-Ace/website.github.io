@@ -1,5 +1,305 @@
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="home-link">ArG0rithm-Ace HOME</a>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>responsive-header-fix</title>
+  <meta name="description" content="Lovable Generated Project" />
+  <meta name="author" content="Lovable" />
+
+  <meta property="og:title" content="responsive-header-fix" />
+  <meta property="og:description" content="Lovable Generated Project" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@lovable_dev" />
+  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ヘッダースタイル */
+    .site-header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .home-link {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .home-link:hover {
+      color: #3498db;
+    }
+
+    /* ハンバーガーメニューボタン */
+    .hamburger-btn {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      position: relative;
+      z-index: 1001;
+    }
+
+    .hamburger-icon {
+      width: 25px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hamburger-line {
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    /* ハンバーガーアイコンのアニメーション */
+    .hamburger-btn.active .hamburger-line:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger-btn.active .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-btn.active .hamburger-line:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* ナビゲーションメニュー */
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      background-color: #34495e;
+      padding-top: 80px;
+      transition: right 0.3s ease;
+      z-index: 999;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+      right: 0;
+    }
+
+    .nav-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav-menu li {
+      border-bottom: 1px solid #2c3e50;
+    }
+
+    .nav-menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 20px 30px;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-menu a::before {
+      content: '';
+      position: absolute;
+      left: -100%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .nav-menu a:hover {
+      background-color: #3498db;
+      transform: translateX(10px);
+    }
+
+    .nav-menu a:hover::before {
+      left: 100%;
+    }
+
+    /* オーバーレイ */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 998;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* メインコンテンツ */
+    .main-content {
+      margin-top: 100px;
+      padding: 2rem 0;
+    }
+
+    .welcome-section {
+      text-align: center;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+
+    .welcome-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .welcome-section p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* レスポンシブ対応 */
+    @media (max-width: 768px) {
+      .home-link {
+        font-size: 1.2rem;
+      }
+      
+      .nav-menu {
+        width: 250px;
+        right: -250px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="home-link">ArG0rithm-Ace HOME</a>
+        
+        <!-- ハンバーガーメニューボタン -->
+        <button class="hamburger-btn" id="hamburgerBtn">
+          <div class="hamburger-icon">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ナビゲーションメニュー -->
+  <nav class="nav-menu" id="navMenu">
+    <ul>
+      <li><a href="echovox.html">Echovox</a></li>
+      <li><a href="punch.html">除霊パンチ</a></li>
+      <li><a href="link.html">LINK</a></li>
+    </ul>
+  </nav>
+
+  <!-- オーバーレイ -->
+  <div class="overlay" id="overlay"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const navMenu = document.getElementById('navMenu');
+      const overlay = document.getElementById('overlay');
+
+      // ハンバーガーメニューの開閉
+      function toggleMenu() {
+        hamburgerBtn.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        
+        // ページスクロールを防ぐ/許可する
+        if (navMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      }
+
+      // ハンバーガーボタンクリック
+      hamburgerBtn.addEventListener('click', toggleMenu);
+
+      // オーバーレイクリックでメニューを閉じる
+      overlay.addEventListener('click', toggleMenu);
+
+      // ESCキーでメニューを閉じる
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+          toggleMenu();
+        }
+      });
+
+      // ウィンドウリサイズ時にメニューを閉じる
+      window.addEventListener('resize', function() {
+        if (navMenu.classList.contains('active')) {
+          toggleMenu();
+        }
+      });
+
+      // メニューリンククリック時にメニューを閉じる
+      const menuLinks = navMenu.querySelectorAll('a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          toggleMenu();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

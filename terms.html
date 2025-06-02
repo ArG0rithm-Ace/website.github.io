@@ -1,20 +1,96 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
-  <script src="main.js"></script>
   <title>決済に関する利用規約</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 </head>
+
+<particles>
+  <div id="particles-js"></div>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function () {
+      console.log('Particles.js config loaded');
+    });
+  </script>
+  <script src="particles.js"></script>
+</particles>
+
 <body>
-  <h1>決済に関する利用規約</h1>
-  <p>本サービスにおける有料商品は、以下の条件に基づき提供されます。</p>
-  <ul>
-    <li>決済手段は Stripe を利用したクレジットカード払いとなります。</li>
-    <li>決済完了後、速やかに対象のデジタル商品または権利が付与されます。</li>
-    <li>商品の性質上、購入後のキャンセル・返金は対応しておりません。</li>
-    <li>不正な決済が確認された場合、利用を停止することがあります。</li>
-    <li>本規約は予告なく変更されることがあります。</li>
-  </ul>
-  <p>ご不明点は Twitter（<a href="https://twitter.com/ArG0_VR" target="_blank">@ArG0_VR</a>）までご連絡ください。</p>
+  <div id="wrap">
+    <main class="container">
+      <section class="Title">
+        <h1>決済に関する利用規約</h1>
+      </section>
+
+      <section class="info-block">
+        <h2>第1条（総則）</h2>
+        <p>本規約は、ArG0-GameCircle（以下「当サークル」といいます）が提供するデジタルコンテンツ・サービス（以下「本サービス」といいます）において、利用者が行う決済に関する一切の事項について定めるものです。</p>
+      </section>
+
+      <section class="info-block">
+        <h2>第2条（決済手段）</h2>
+        <p>利用者は、当サークルが指定する以下の方法により決済を行うものとします。</p>
+        <ul>
+          <li>a. クレジットカード決済（Stripe経由）</li>
+          <li>b. その他、当サークルが別途認める方法</li>
+        </ul>
+      </section>
+
+      <section class="info-block">
+        <h2>第3条（支払時期）</h2>
+        <p>クレジットカードによる決済は、利用者がサービス購入時に即時決済されるものとし、引き落とし時期は各カード会社の規定に基づきます。</p>
+      </section>
+
+      <section class="info-block">
+        <h2>第4条（領収書の発行）</h2>
+        <p>当サークルでは、Stripeを通じて決済が行われるため、当サークルが直接領収書を発行することはありません。ご利用のクレジットカード明細書またはStripeの支払履歴をご確認ください。</p>
+      </section>
+
+      <section class="info-block">
+        <h2>第5条（決済情報の管理）</h2>
+        <p>決済に関連する個人情報（クレジットカード番号等）は、当サークルでは保持・管理しておりません。Stripe社のセキュアな決済システムを通じて処理されます。</p>
+      </section>
+
+      <section class="info-block">
+        <h2>第6条（キャンセル・返金）</h2>
+        <p>本サービスはデジタルコンテンツの性質上、決済完了後のキャンセル・返金は原則として行っておりません。ただし、以下のいずれかに該当する場合はこの限りではありません。</p>
+        <ul>
+          <li>a. サービス提供の不備により提供が不可能な場合</li>
+          <li>b. 当サークルが特別に認めた場合</li>
+        </ul>
+      </section>
+
+      <section class="info-block">
+        <h2>第7条（不正決済への対応）</h2>
+        <p>不正利用や名義盗用が疑われる決済が確認された場合、当サークルは直ちに利用の停止・キャンセル等の対応を行うほか、関係機関へ通報または協力を行うことがあります。</p>
+      </section>
+
+      <section class="info-block">
+        <h2>第8条（禁止事項）</h2>
+        <p>以下の行為は固く禁止します。</p>
+        <ul>
+          <li>a. 他人のクレジットカード情報を不正に使用する行為</li>
+          <li>b. 意図的な二重決済やチャージバックの濫用</li>
+          <li>c. その他、当サークルが不適切と判断する行為</li>
+        </ul>
+      </section>
+
+      <section class="info-block">
+        <h2>第9条（免責事項）</h2>
+        <p>当サークルは、決済処理においてStripe社など外部サービスに起因する障害や遅延等について一切の責任を負いません。また、利用者の決済情報管理についても責任を負いかねます。</p>
+      </section>
+
+      <section class="info-block">
+        <h2>第10条（準拠法および管轄）</h2>
+        <p>本規約は日本法に準拠し解釈されるものとします。また、本規約に関連して紛争が生じた場合には、当サークル所在地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</p>
+      </section>
+
+    </main>
+  </div>
 </body>
+
 </html>
