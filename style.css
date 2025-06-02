@@ -1,15 +1,30 @@
+/*文字化け防止*/
+@charset "utf-8";
+
+/*
+CSSのコメント文だよ。
+CSSの画面はhtmlのタブの横の画面に持ってくると分かりやすくて良い感じ。
+*/
+
+/*
+marginを0にしないとpタグを使用した際に
+ブラウザのバグで余白が出来てしまう
+*/
+
+
 body {
   margin: 0;
-  padding-top: 60px;
+  padding-top: 100px;
   padding-bottom: 60px;
   font-family: sans-serif;
+      background: #323339; /* 背景色にグレーを指定 */
 }
 
 .site-header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #333;
+  background: #28292E;
   color: white;
   padding: 10px 20px;
   z-index: 1000;
@@ -25,7 +40,7 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #333;
+  background: #28292E;
   color: white;
   padding: 10px 20px;
   text-align: center;

@@ -1,0 +1,58 @@
+/*文字化け防止*/
+@charset "utf-8";
+
+/*
+CSSのコメント文だよ。
+CSSの画面はhtmlのタブの横の画面に持ってくると分かりやすくて良い感じ。
+*/
+
+/*
+marginを0にしないとpタグを使用した際に
+ブラウザのバグで余白が出来てしまう
+*/
+body {
+    margin: 0px;
+    padding-top: 100px; /* ヘッダーの後ろに要素が隠れないようにするため */
+}
+
+wrap
+{
+    width: 100%; /* 幅いっぱいを指定 */
+
+    /*height: 100px;  高さを50pxに指定 */
+
+    height: 100%; /* スクロールの演出を見れるようにmainに高さを指定 */
+    background: rgb(47, 49, 54); /* 背景色にグレーを指定 */
+    padding: 20px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+    display: flex; /* 中の要素を横並びにする */
+    align-items: center; /* 中の要素を上下中央に並べる */
+}
+
+wrap p
+{
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: normal;
+    text-align: start;
+
+    font-size: 200%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(255, 255, 255);
+}
+
+/*========= ↓particle js を描画するエリア設定↓ ===============*/
+
+html,body
+{
+    height: 91%;/*高さを100%にして描画エリアをとる*/
+}
+  
+#particles-js
+{ 
+    position:fixed;/*描画固定*/
+    z-index:-2;/*描画を一番下に*/
+    width: 100%;
+    height: 100%;
+    background-color:rgb(47, 49, 54);/*背景色*/
+}
