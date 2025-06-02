@@ -84,3 +84,15 @@ body {
   margin: 5px;
 }
 
+.info-block h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 4px;
+  font-weight: bold;
+}
+
+.info-block p {
+  margin-top: 4px;
+  font-size: 16px;
+}
