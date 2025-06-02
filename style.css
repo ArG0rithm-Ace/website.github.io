@@ -11,6 +11,15 @@ marginを0にしないとpタグを使用した際に
 ブラウザのバグで余白が出来てしまう
 */
 
+#particles-js
+{ 
+    position:fixed;/*描画固定*/
+    z-index:-2;/*描画を一番下に*/
+    width: 100%;
+    height: 100%;
+    background-color:rgb(47, 49, 54);/*背景色*/
+}
+
 
 body {
   margin: 0;
@@ -18,6 +27,7 @@ body {
   padding-bottom: 90px;
   font-family: sans-serif;
   background: #2C2D32; /* 背景色にグレーを指定 */
+    z-index: 1;
 }
 
 #wrap
@@ -113,3 +123,4 @@ body {
   padding-bottom: 10px;
   color: #D2D2D4
 }
+
