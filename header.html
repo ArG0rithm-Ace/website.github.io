@@ -39,11 +39,6 @@
     gap: 12px;
   }
 
-  .home-section:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
-  }
-
   .header-icon {
     margin-top: 8px;
     width: 32px;
@@ -84,13 +79,28 @@
     margin-right: 45px;
     background: none;
     border-radius: 8px;
-    background: linear-gradient(125deg, #D306A8 0%, #5F63ED 100%);
+     position: relative;
+    z-index: 0;
+    background: linear-gradient(125deg, #5f64ed80 0%, #d306a680 100%);
+
   }
 
- .hamburger-btn:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
-  }
+/* マウスホバー時の背景色を重ねて表示（初期状態で透明） */
+ .hamburger-btn:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+        border-radius: 8px;
+    background: linear-gradient(125deg, #d306a6 0%, #5f64ed 100%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* マウスホバー時に透明化を解除 */
+ .hamburger-btn:hover::before {
+    opacity: 1;
+}
 
   .menu-text {
     font-size: 22px;
@@ -118,6 +128,12 @@
     transition: all 0.3s ease;
     transform-origin: center;
   }
+
+    /* ハンバーガーアイコンのアニメーション */
+  .hamburger-btn.active {
+    background: linear-gradient(125deg, #d306a6 0%, #5f64ed 100%);
+  }
+
 
   /* ハンバーガーアイコンのアニメーション */
   .hamburger-btn.active .hamburger-line:nth-child(1) {
