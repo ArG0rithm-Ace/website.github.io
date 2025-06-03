@@ -38,7 +38,7 @@ body {
 
 #wrap {
   background-color: #323339;
-  margin-top: 15px;
+  margin-top: 25px;
   width: 50%;
   height: 100%;
   margin-left: auto;
@@ -132,8 +132,7 @@ body {
       margin-top: 5px;
 }
 
-
-.info-block a text{
+.info-block a booth{
 font-size: 25px;
   color: #ffffff;
   background-color: #FC4D50;
@@ -143,6 +142,48 @@ font-size: 25px;
             padding-right: 5px;
       padding-left: 5px;
       padding-bottom: 5px;
+}
+
+.info-block a vrchat{
+font-size: 25px;
+outline: 5px solid rgb(0, 0, 0);
+border-radius: 1rem;
+  background-color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+      border-radius: 8px;
+            padding-right: 5px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+color: #000000;
+}
+
+.info-block_B a {
+    background-color: #ffffff1e;
+  justify-content: center;
+  display: flex;   
+    text-decoration: none;
+      margin-top: 5px;
+}
+
+.info-block_B h2 {
+  font-size: 18px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #97989F;
+  /*罫線の色*/
+  padding-bottom: 0px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.info-block_B a text{
+font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+            padding-right: 5px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+color: #ffffff;
 }
 
 .info-block p {
