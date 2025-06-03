@@ -18,7 +18,7 @@ marginを0にしないとpタグを使用した際に
   /*描画を一番下に*/
   width: 100%;
   height: 100%;
-  background-color: #2C2D32;
+  background-color: #222328;
   /*背景色*/
 }
 
@@ -29,7 +29,7 @@ body {
   padding-top: 55px;
   padding-bottom: 90px;
   font-family: sans-serif;
-  margin-top: 0;
+  margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
   /* 背景色にグレーを指定 */
@@ -38,19 +38,21 @@ body {
 
 #wrap {
   background-color: #323339;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin-top: 15px;
   width: 50%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding: 0px 20px;
+  padding-top: 10px;
+  padding-bottom: 40px;
 }
 
 .site-header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #28292E;
+  background: #2C2D32;
   color: white;
   padding: 10px 20px;
   z-index: 1000;
@@ -66,7 +68,7 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #28292E;
+  background: #2C2D32;
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -109,25 +111,45 @@ body {
   /*border-bottom: 1px solid #88898F; 罫線の色*/
   padding-bottom: 4px;
   font-weight: bold;
-  color: #FFFFFF
+  color: #FFFFFF;
 }
 
 
 .info-block h2 {
   font-size: 18px;
   margin-bottom: 0px;
-  border-bottom: 1px solid #88898F;
+  border-bottom: 1px solid #97989F;
   /*罫線の色*/
   padding-bottom: 0px;
   font-weight: bold;
-  color: #FFFFFF
+  color: #FFFFFF;
+}
+
+.info-block a {
+  justify-content: center;
+  display: flex;   
+    text-decoration: none;
+      margin-top: 5px;
+}
+
+
+.info-block a text{
+font-size: 25px;
+  color: #ffffff;
+  background-color: #FC4D50;
+  font-weight: bold;
+  text-decoration: none;
+      border-radius: 8px;
+            padding-right: 5px;
+      padding-left: 5px;
+      padding-bottom: 5px;
 }
 
 .info-block p {
   margin-top: 5px;
   font-size: 15px;
   padding-bottom: 0px;
-  color: #D2D2D4
+  color: #D2D2D4;
 }
 
 .info-block ul {

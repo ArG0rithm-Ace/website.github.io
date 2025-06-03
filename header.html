@@ -1,8 +1,8 @@
 <header class="site-header">
   <div class="container">
     <div class="header-content">
-      <a href="index.html" class="home-link">ArG0rithm-Ace HOME</a>
-      
+      <a href="index.html" class="home-link">ArG0rithm-Ace WebPage</a>
+
       <!-- ハンバーガーメニューボタン -->
       <button class="hamburger-btn" id="hamburgerBtn">
         <div class="hamburger-icon">
@@ -10,6 +10,7 @@
           <div class="hamburger-line"></div>
           <div class="hamburger-line"></div>
         </div>
+        <span class="menu-text">Menu</span>
       </button>
     </div>
   </div>
@@ -18,8 +19,9 @@
 <!-- ナビゲーションメニュー -->
 <nav class="nav-menu" id="navMenu">
   <ul>
-    <li><a href="echovox.html">Echovox</a></li>
-    <li><a href="punch.html">除霊パンチ</a></li>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="echovox.html">VR GAME - EchoVox</a></li>
+    <li><a href="punch.html">HORROR GAME - 除霊パンチ</a></li>
     <li><a href="link.html">LINK</a></li>
   </ul>
 </nav>
@@ -28,143 +30,172 @@
 <div class="overlay" id="overlay"></div>
 
 <style>
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* ハンバーガーメニューボタン */
-.hamburger-btn {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  position: relative;
-  z-index: 1001;
-}
-
-.hamburger-icon {
-  width: 25px;
-  height: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hamburger-line {
-  width: 100%;
-  height: 3px;
-  background-color: white;
-  transition: all 0.3s ease;
-  transform-origin: center;
-}
-
-/* ハンバーガーアイコンのアニメーション */
-.hamburger-btn.active .hamburger-line:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-
-.hamburger-btn.active .hamburger-line:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-btn.active .hamburger-line:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* ナビゲーションメニュー */
-.nav-menu {
-  position: fixed;
-  top: 0;
-  right: -300px;
-  width: 300px;
-  height: 100vh;
-  background-color: #34495e;
-  padding-top: 80px;
-  transition: right 0.3s ease;
-  z-index: 999;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-}
-
-.nav-menu.active {
-  right: 0;
-}
-
-.nav-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-.nav-menu li {
-  border-bottom: 1px solid #2c3e50;
-}
-
-.nav-menu a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 20px 30px;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.nav-menu a::before {
-  content: '';
-  position: absolute;
-  left: -100%;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-  transition: left 0.5s;
-}
-
-.nav-menu a:hover {
-  background-color: #3498db;
-  transform: translateX(10px);
-}
-
-.nav-menu a:hover::before {
-  left: 100%;
-}
-
-/* オーバーレイ */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 998;
-}
-
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-  .home-link {
-    font-size: 1.2rem;
   }
-  
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  /* ハンバーガーメニューボタン 
+  .hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1001;
+  }*/
+
+  .hamburger-btn {
+    display: flex;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    gap: 8px;
+    margin-right: 45px;
+    background: none;
+    border-radius: 8px;
+    background: linear-gradient(125deg, #D306A8 0%, #5F63ED 100%);
+  }
+
+  .menu-text {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    color: white;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .hamburger-icon {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  /* ハンバーガーアイコンのアニメーション */
+  .hamburger-btn.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .hamburger-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-btn.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* ナビゲーションメニュー */
   .nav-menu {
-    width: 250px;
-    right: -250px;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(54, 55, 62, 0.5);
+
+    padding-top: 80px;
+    transition: right 0.3s ease;
+    z-index: 999;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   }
-}
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-menu li {
+    border-bottom: 1px solid #97989F;
+  }
+
+  .nav-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 20px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+  }
+
+  .nav-menu a::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transition: left 0.5s;
+  }
+
+  .nav-menu a:hover {
+    background: linear-gradient(125deg, #D306A8 0%, #5F63ED 100%);
+    transform: translateX(10px);
+    padding: 40px 30px;
+  }
+
+  .nav-menu a:hover::before {
+    left: 100%;
+  }
+
+  /* オーバーレイ */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+  }
+
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* レスポンシブ対応 */
+  @media (max-width: 768px) {
+    .home-link {
+      font-size: 1.2rem;
+    }
+
+    .nav-menu {
+      width: 250px;
+      right: -250px;
+    }
+  }
 </style>
