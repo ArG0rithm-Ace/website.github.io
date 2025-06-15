@@ -199,3 +199,76 @@ color: #ffffff;
   padding-bottom: 0px;
   color: #D2D2D4;
 }
+
+/* ===== 料金表のスタイル ===== */
+
+/* 4つのプランを横並びにするためのコンテナ */
+.pricing-container {
+  display: flex; /* Flexboxを有効化 */
+  justify-content: center; /* 中央揃え */
+  gap: 20px; /* 各プランの間のスペース */
+  flex-wrap: wrap; /* 画面が狭い時に折り返す */
+  margin-top: 25px; /* 上の要素との余白 */
+}
+
+/* 各料金プランのカード */
+.pricing-plan {
+  /* 背景色や枠線は既存の#wrapと合わせる */
+  background-color: #2C2D32; /* 背景色 */
+  padding: 25px 20px;
+  border-radius: 8px; /* 角を丸くする */
+  text-align: center; /* テキストを中央揃え */
+  width: 200px; /* カードの横幅を固定 */
+  display: flex;
+  flex-direction: column; /* 要素を縦に並べる */
+  justify-content: space-between; /* 要素を均等に配置 */
+}
+
+/* プラン名 (VIP Rankなど) */
+.plan-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  min-height: 40px; /* 高さを揃える */
+}
+
+/* プランの説明 (VIP+ Prefixなど) */
+.plan-description {
+  font-size: 14px;
+  color: #D2D2D4;
+  min-height: 20px; /* 高さを揃える */
+  margin: 10px 0;
+}
+
+/* 価格 ($6.99など) */
+.plan-price {
+  font-size: 36px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin: 15px 0;
+}
+
+/* 価格の横のテキスト (/month) */
+.plan-price .price-per {
+  font-size: 16px;
+  font-weight: normal;
+  color: #D2D2D4;
+}
+
+/* Subscribeボタン */
+.subscribe-button {
+  display: block; /* ブロック要素にして幅を100%に */
+  background-color: #6d28d9; /* 紫色 */
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 0;
+  border-radius: 8px; /* 角を丸くする */
+  transition: background-color 0.2s ease; /* ホバー時のアニメーション */
+  margin-top: 15px; /* 上の要素との余白 */
+}
+
+/* ボタンにカーソルを合わせた時のスタイル */
+.subscribe-button:hover {
+  background-color: #8b5cf6; /* 少し明るい紫色 */
+}
